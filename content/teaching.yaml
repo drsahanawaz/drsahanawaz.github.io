@@ -1,0 +1,30 @@
+title: Teaching
+headline: "Chemistry should be understood, not merely memorised."
+lead: "Lecturer and Head of the Department of Science & Humanities at Sheikhpara ARM Polytechnic—teaching chemistry since 2021 across multidisciplinary technical programmes."
+
+objective: "Make fundamental chemical concepts understandable and relevant to the professional discipline in which students will eventually apply them."
+
+courses:
+  - title: Applied Chemistry
+    text: Fundamental chemical principles and their applications in technical and professional disciplines.
+    resources_href: /resources/#applied-chemistry
+  - title: Applied Chemistry Laboratory
+    text: Practical chemistry, experimental observation, measurement, chemical analysis and laboratory reasoning.
+    resources_href: /resources/#applied-chemistry-lab
+  - title: Fundamental Chemistry
+    text: Foundational chemistry for students who require chemical understanding as part of an interdisciplinary technical curriculum.
+    resources_href: /resources/#fundamental-chemistry
+
+students:
+  - title: Medical Laboratory Technology
+    text: Chemistry relevant to laboratory science, biochemical systems and analytical measurements.
+  - title: Food Processing Technology
+    text: Chemical principles underlying food composition, processing, quality and analysis.
+  - title: Computer Software Technology
+    text: Foundational science education within a multidisciplinary technical curriculum.
+
+science_club:
+  title: Institute Science Club
+  text: Faculty Coordinator of the Institute Science Club, supporting scientific activities, student participation and interdisciplinary engagement beyond the formal syllabus.
+
+student_note: "If you are one of my students, use the Resources page for available course material. For academic questions, use your institution's established communication channels."

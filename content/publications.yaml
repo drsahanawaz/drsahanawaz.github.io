@@ -1,0 +1,26 @@
+# Website manager: add new papers at the top of `items`.
+items:
+  - year: 2025
+    journal: "Analysis & Sensing"
+    title: "A Smart Photoswitchable Sensor for Differential Detection of Multiple Nucleotides In Two Photoswitchable States using Machine Learning Techniques"
+    summary: "Machine-learning-assisted chemical sensing and molecular recognition using a photoswitchable tripodal receptor."
+    doi: "10.1002/anse.202500082"
+    url: "https://doi.org/10.1002/anse.202500082"
+    featured: true
+
+  - year: 2024
+    journal: "The Journal of Physical Organic Chemistry"
+    title: "Sequence effects on the thermal cis–trans isomerization of side-chain stearate-containing azobenzene polymers"
+    summary: "Research on photoresponsive molecular systems and their physicochemical behaviour."
+    doi: "10.1002/poc.4599"
+    url: "https://doi.org/10.1002/poc.4599"
+    featured: true
+
+  - year: 2021
+    journal: "ACS Applied Electronic Materials"
+    volume: "3, 309–315"
+    title: "Photoswitchable Molecular Glue for Carbon Nanotubes Reversibly Controls Electronic Mobility with Light"
+    summary: "A photoresponsive azobenzene-based system that noncovalently functionalises carbon nanotubes and enables reversible light-controlled conductivity."
+    doi: "10.1021/acsaelm.0c00857"
+    url: "https://doi.org/10.1021/acsaelm.0c00857"
+    featured: false

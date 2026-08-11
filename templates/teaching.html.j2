@@ -1,0 +1,64 @@
+{% extends "base.html.j2" %}
+{% block title %}Teaching · {{ site.name }}{% endblock %}
+{% block description %}{{ page.lead }}{% endblock %}
+{% block content %}
+<section class="page-hero page-hero--visual page-hero--lab">
+  <div class="shell">
+    <p class="section-kicker">Teaching</p>
+    <h1>{{ page.headline }}</h1>
+    <p class="lead">{{ page.lead }}</p>
+  </div>
+</section>
+
+<section class="section section-visual section-visual--soft">
+  <div class="shell narrow">
+    <h2>Objective</h2>
+    <p>{{ page.objective }}</p>
+  </div>
+</section>
+
+<section class="section section-visual section-visual--molecules">
+  <div class="shell">
+    <h2>Courses</h2>
+    <div class="focus-list">
+      {% for course in page.courses %}
+      <article class="focus-item">
+        <h3>{{ course.title }}</h3>
+        <p>{{ course.text }}</p>
+        <a class="text-link" href="{{ course.resources_href }}">Course resources →</a>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-visual section-visual--data section-visual--dim">
+  <div class="shell">
+    <h2>Students I teach</h2>
+    <div class="focus-list three">
+      {% for group in page.students %}
+      <article class="focus-item">
+        <h3>{{ group.title }}</h3>
+        <p>{{ group.text }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<div class="visual-break visual-break--molecules" role="presentation" aria-hidden="true"></div>
+
+<section class="section section-visual section-visual--lab">
+  <div class="shell split">
+    <div>
+      <h2>{{ page.science_club.title }}</h2>
+      <p>{{ page.science_club.text }}</p>
+    </div>
+    <div>
+      <h2>For students</h2>
+      <p>{{ page.student_note }}</p>
+      <a class="btn btn-primary" href="/resources/">Student resources</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

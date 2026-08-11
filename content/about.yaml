@@ -1,0 +1,29 @@
+title: About
+headline: "From molecules to data."
+lead: "Chemist, chemical data scientist and educator working at the intersection of chemistry, molecular information and machine learning."
+
+bio:
+  - "Dr. Md Sahanawaz is a chemist, chemical data scientist and educator whose work sits at the intersection of chemistry, molecular information and machine learning."
+  - "He completed his B.Sc. in Chemistry from Ramakrishna Mission Vivekananda Centenary College in 2016 and his M.Sc. in Organic Chemistry from IIT Bombay in 2018."
+  - "He qualified CSIR-NET with All India Rank 17 and subsequently pursued doctoral research in Chemistry at IISER Kolkata."
+  - "His PhD research focused on photochromic receptors for nucleotide detection using machine-learning techniques, combining molecular design, spectroscopy, chemical sensing and multivariate data analysis. He completed his PhD in 2026."
+  - "His current research interests are increasingly computational, with an emphasis on cheminformatics, chemical data science, machine learning and molecular property prediction."
+  - "He currently serves as Lecturer and Head of the Department of Science & Humanities at Sheikhpara ARM Polytechnic, where he teaches chemistry to students from Medical Laboratory Technology, Food Processing Technology and Computer Software Technology."
+
+timeline:
+  - year: "2026"
+    title: PhD Chemistry
+    place: IISER Kolkata
+  - year: "2018"
+    title: M.Sc. Organic Chemistry
+    place: IIT Bombay
+  - year: "2016"
+    title: B.Sc. Chemistry
+    place: RKMVC College
+
+credentials:
+  - CSIR-NET — AIR 17
+  - GATE
+  - JAM
+  - WBPSC
+  - Menno Henselmans PT Certification

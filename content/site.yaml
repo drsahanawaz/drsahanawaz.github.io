@@ -1,0 +1,35 @@
+name: "Dr Sahanawaz"
+full_name: "Md Sahanawaz, PhD"
+short_name: "Dr. Md Sahanawaz"
+tagline: "Chemical Data Scientist · Lecturer"
+domain: "drsahanawaz.com"
+email_professional: "sahanawaz@wbscte.ac.in"
+email_general: "drsahanawazofficial@gmail.com"
+cv_path: "/assets/cv/Sahanawaz_CV.pdf"
+portrait: "/assets/images/portrait.jpg"
+portrait_alt: "Portrait of Md Sahanawaz"
+nav:
+  - label: Home
+    href: /
+    key: home
+  - label: About
+    href: /about/
+    key: about
+  - label: Research
+    href: /research/
+    key: research
+  - label: Teaching
+    href: /teaching/
+    key: teaching
+  - label: Resources
+    href: /resources/
+    key: resources
+  - label: Contact
+    href: /contact/
+    key: contact
+links:
+  google_scholar: "https://scholar.google.com/citations?user=SEARCH_ME"
+  github: "https://github.com/drsahanawaz"
+  linkedin: "https://www.linkedin.com/in/drsahanawaz"
+  orcid: "https://orcid.org/0000-0000-0000-0000"
+social_note: "Update Google Scholar / ORCID IDs in content/site.yaml when ready."

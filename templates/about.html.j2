@@ -1,0 +1,50 @@
+{% extends "base.html.j2" %}
+{% block title %}About · {{ site.name }}{% endblock %}
+{% block description %}{{ page.lead }}{% endblock %}
+{% block content %}
+<section class="page-hero page-hero--visual page-hero--molecules">
+  <div class="shell about-intro">
+    <div class="about-copy">
+      <p class="section-kicker">About</p>
+      <h1>{{ page.headline }}</h1>
+      <p class="lead">{{ page.lead }}</p>
+    </div>
+    <figure class="about-portrait">
+      <img src="{{ site.portrait }}" alt="{{ site.portrait_alt }}" width="768" height="1024">
+    </figure>
+  </div>
+</section>
+
+<section class="section section-visual section-visual--soft">
+  <div class="shell prose">
+    {% for para in page.bio %}
+    <p>{{ para }}</p>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section section-visual section-visual--data section-visual--dim">
+  <div class="shell split">
+    <div>
+      <h2>Timeline</h2>
+      <ol class="timeline">
+        {% for step in page.timeline %}
+        <li>
+          <span class="year">{{ step.year }}</span>
+          <span class="title">{{ step.title }}</span>
+          <span class="place">{{ step.place }}</span>
+        </li>
+        {% endfor %}
+      </ol>
+    </div>
+    <div>
+      <h2>Credentials</h2>
+      <ul class="credential-list">
+        {% for item in page.credentials %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+{% endblock %}

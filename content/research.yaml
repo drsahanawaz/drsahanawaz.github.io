@@ -1,0 +1,45 @@
+title: Research
+headline: "Chemical problems. Data-driven approaches."
+lead: "Research at the intersection of chemistry, molecular information and data science—from photochromic sensing to reproducible cheminformatics workflows."
+
+interests:
+  - title: Cheminformatics
+    text: Computational representations of molecules and extraction of chemically meaningful information from molecular datasets—descriptors, fingerprints, chemical-space analysis, similarity and structure–property relationships.
+  - title: Machine Learning for Chemistry
+    text: Supervised and unsupervised learning for chemical classification and prediction, with attention to dimensionality reduction, validation, interpretability and end-to-end workflows.
+  - title: Chemical Sensing & Pattern Recognition
+    text: Multivariate analysis and machine learning for extracting information from complex spectroscopic response patterns and improving analyte discrimination.
+  - title: Molecular Property Prediction
+    text: Cheminformatics pipelines for predicting molecular and physicochemical properties from structural information.
+
+phd:
+  title: "Photochromic Receptors for Nucleotide Detection Using Machine Learning Techniques"
+  meta: "PhD in Chemistry · IISER Kolkata · 2026"
+  text: |
+    Doctoral research investigated azobenzene-based photochromic molecular systems designed to interact with biologically relevant analytes.
+    Rather than relying exclusively on individual spectroscopic responses, the work explored how patterns embedded in experimental data could be analysed using multivariate statistical and machine-learning techniques.
+    Methods including Principal Component Analysis (PCA) and Linear Discriminant Analysis (LDA) were used to investigate chemical-response patterns and analyte discrimination.
+  question: "How can molecular and experimental chemical data be transformed into reliable, interpretable predictions?"
+
+projects:
+  - title: Chemical Machine-Learning Pipeline
+    text: Reproducible workflows from raw chemical datasets to molecular representations, exploratory analysis, model development, validation and interpretation.
+    tools: "Python · RDKit · scikit-learn · molecular descriptors · fingerprints"
+    status: Ongoing
+  - title: Machine Learning for Analyte Detection
+    text: Statistical and machine-learning methodologies for analysing multidimensional sensing data and discriminating chemically related analytes.
+    tools: "PCA · LDA · classification · clustering · model validation"
+    status: Ongoing
+  - title: Molecular Property Prediction
+    text: Descriptor- and fingerprint-based machine-learning approaches for predicting chemical properties.
+    tools: "RDKit · Random Forest · Bayesian methods · cheminformatics"
+    status: Ongoing
+
+methods:
+  Programming: ["Python"]
+  Cheminformatics: ["RDKit", "molecular descriptors", "molecular fingerprints", "chemical-space analysis"]
+  Machine Learning: ["PCA", "LDA", "Random Forest", "Bayesian approaches", "classification", "clustering"]
+  Experimental Data: ["UV–visible spectroscopy", "spectroscopic pattern analysis"]
+  Research Workflow: ["Data preprocessing", "exploratory analysis", "feature engineering", "model development", "validation", "visualisation"]
+
+collaboration_text: "Open to collaborations in cheminformatics, machine learning for chemical datasets, chemical property prediction, chemical sensing and pattern recognition, and data-driven molecular research."

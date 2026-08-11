@@ -1,0 +1,37 @@
+# Website manager: add student notes/slides/PDFs under the matching course `entries`.
+# Place files in assets/resources/ and link with /assets/resources/your-file.pdf
+title: Resources
+headline: "Teaching & student resources"
+lead: "Selected course materials, presentations, notes and supporting resources. New items appear here when added through the website manager workflow."
+
+courses:
+  - id: applied-chemistry
+    title: Applied Chemistry
+    empty_message: "No resources uploaded yet for Applied Chemistry."
+    entries: []
+
+  - id: applied-chemistry-lab
+    title: Applied Chemistry Laboratory
+    empty_message: "No lab resources uploaded yet."
+    entries: []
+
+  - id: fundamental-chemistry
+    title: Fundamental Chemistry
+    empty_message: "No resources uploaded yet for Fundamental Chemistry."
+    entries: []
+
+# Optional cross-cutting tools / demos listed on Resources
+tools:
+  headline: "Tools & demos"
+  empty_message: "No public tools listed yet. Ask the website manager to add a new tool entry."
+  entries:
+    - title: "Spectra Autopilot — UV–Vis Plotter"
+      type: "Tool"
+      href: "https://spectraautopilot.streamlit.app"
+      note: "Upload spectrophotometer files (TXT/CSV/TSV), preview, plot, and export. Formatting only—no automatic smoothing or baseline correction. Conceived and scientifically led by Dr. Md Sahanawaz."
+      external: true
+    - title: "TCSPC AutoFit"
+      type: "Tool"
+      href: "https://tcspcautofit.streamlit.app"
+      note: "Fluorescence lifetime fitting by iterative IRF reconvolution for Horiba/DAS-style TCSPC exports. Scientifically led by Dr. Sahanawaz."
+      external: true

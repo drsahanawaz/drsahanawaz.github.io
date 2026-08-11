@@ -1,0 +1,73 @@
+title: Home
+headline: "Chemistry, interpreted through data."
+lead: "I work at the intersection of chemistry and data science, using molecular information, statistical methods and machine learning to investigate chemical problems."
+cta_primary:
+  label: Explore research
+  href: /research/
+cta_secondary:
+  label: Contact
+  href: /contact/
+
+focus_title: "Research focus"
+focus_items:
+  - title: Cheminformatics
+    text: Representing, analysing and extracting useful information from molecular datasets.
+  - title: Machine Learning in Chemistry
+    text: Developing data-driven approaches for classification, prediction and chemical pattern recognition.
+  - title: Chemical Sensing & Molecular Recognition
+    text: Applying multivariate and machine-learning methods to chemical sensing and analyte discrimination.
+
+exploring_title: "Currently exploring"
+exploring_headline: "Building data-driven workflows for chemical research"
+exploring_text: "My current independent research focuses on developing and evaluating machine-learning pipelines for problems including chemical property prediction, molecular data analysis and analyte detection."
+toolkit:
+  - Python
+  - RDKit
+  - PCA
+  - LDA
+  - Random Forest
+  - Bayesian Methods
+  - Chemical Data Analysis
+
+featured_title: "Featured research"
+featured_headline: "Machine Learning for Chemical Recognition"
+featured_text: "During doctoral research at IISER Kolkata, I investigated photochromic molecular receptors and their application to the recognition of biologically relevant analytes—combining spectroscopic responses with multivariate and machine-learning methods."
+
+teaching_title: "Teaching"
+teaching_headline: "Teaching chemistry with emphasis on understanding."
+teaching_text: "Lecturer and Head of the Department of Science & Humanities at Sheikhpara ARM Polytechnic, teaching chemistry across multidisciplinary diploma programmes."
+courses:
+  - Applied Chemistry
+  - Applied Chemistry Laboratory
+  - Fundamental Chemistry
+programmes:
+  - Medical Laboratory Technology
+  - Food Processing Technology
+  - Computer Software Technology
+
+journey_title: "Journey"
+journey_headline: "From molecules to data"
+journey:
+  - year: "2016"
+    title: B.Sc. Chemistry
+    place: Ramakrishna Mission Vivekananda Centenary College
+  - year: "2018"
+    title: M.Sc. Chemistry
+    place: IIT Bombay
+  - year: "CSIR-NET"
+    title: All India Rank 17
+    place: Junior Research Fellowship
+  - year: "2026"
+    title: PhD in Chemistry
+    place: IISER Kolkata
+  - year: "Present"
+    title: Lecturer & HOD
+    place: Science & Humanities · Sheikhpara ARM Polytechnic
+
+beyond_title: "Beyond chemistry"
+beyond_headline: "Human performance through the same scientific lens."
+beyond_text: "Outside chemistry, I have a strong interest in evidence-based human performance, resistance training and fitness. I am a certified Menno Henselmans Personal Trainer and explore how scientific reasoning applies to training, nutrition and human performance."
+
+connect_title: "Let's connect"
+connect_headline: "Research. Collaboration. Education."
+connect_text: "I am interested in connecting with researchers, institutions, educators and students working in chemistry, cheminformatics and chemical data science."

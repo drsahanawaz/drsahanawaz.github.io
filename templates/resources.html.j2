@@ -1,0 +1,56 @@
+{% extends "base.html.j2" %}
+{% block title %}Resources · {{ site.name }}{% endblock %}
+{% block description %}{{ page.lead }}{% endblock %}
+{% block content %}
+<section class="page-hero page-hero--visual page-hero--data">
+  <div class="shell">
+    <p class="section-kicker">Resources</p>
+    <h1>{{ page.headline }}</h1>
+    <p class="lead">{{ page.lead }}</p>
+  </div>
+</section>
+
+{% for course in page.courses %}
+<section class="section section-visual {% if loop.index % 3 == 1 %}section-visual--molecules{% elif loop.index % 3 == 2 %}section-visual--data{% else %}section-visual--lab{% endif %} section-visual--dim" id="{{ course.id }}">
+  <div class="shell">
+    <h2>{{ course.title }}</h2>
+    {% if course.entries %}
+    <ul class="resource-list">
+      {% for item in course.entries %}
+      <li>
+        <a href="{{ item.href }}"{% if item.external %} rel="noopener noreferrer" target="_blank"{% endif %}>
+          <span class="resource-title">{{ item.title }}</span>
+          {% if item.type %}<span class="resource-type">{{ item.type }}</span>{% endif %}
+        </a>
+        {% if item.note %}<p class="muted">{{ item.note }}</p>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="muted">{{ course.empty_message }}</p>
+    {% endif %}
+  </div>
+</section>
+{% endfor %}
+
+<section class="section section-visual section-visual--soft" id="tools">
+  <div class="shell">
+    <h2>{{ page.tools.headline }}</h2>
+    {% if page.tools.entries %}
+    <ul class="resource-list">
+      {% for item in page.tools.entries %}
+      <li>
+        <a href="{{ item.href }}"{% if item.external %} rel="noopener noreferrer" target="_blank"{% endif %}>
+          <span class="resource-title">{{ item.title }}</span>
+          {% if item.type %}<span class="resource-type">{{ item.type }}</span>{% endif %}
+        </a>
+        {% if item.note %}<p class="muted">{{ item.note }}</p>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="muted">{{ page.tools.empty_message }}</p>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}
