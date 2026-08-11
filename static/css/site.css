@@ -401,6 +401,22 @@ p {
   background-image: url("/assets/images/bg-lab.jpg");
 }
 
+.section-visual--beyond::before {
+  background-image: url("/assets/images/beyond-chemistry.jpg");
+  background-size: cover;
+  background-position: center 28%;
+  opacity: 0.5;
+  filter: none;
+  transform: none;
+}
+
+.section-visual--beyond::after {
+  background:
+    linear-gradient(180deg, rgba(7, 14, 16, 0.55), rgba(7, 14, 16, 0.72)),
+    linear-gradient(90deg, rgba(7, 14, 16, 0.45), rgba(7, 14, 16, 0.25) 55%, rgba(7, 14, 16, 0.5));
+}
+
+
 .section-visual--soft::before {
   background-image: url("/assets/images/bg-molecules.jpg");
   background-position: 50% 70%;
