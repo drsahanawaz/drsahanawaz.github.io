@@ -8,3 +8,4 @@ site/
 site.bak*/
 *.egg-info/
 .pytest_cache/
+.github/workflows/
