@@ -405,7 +405,7 @@ p {
   background-image: url("/assets/images/beyond-chemistry.jpg");
   background-size: cover;
   background-position: center 28%;
-  opacity: 0.5;
+  opacity: 0.35;
   filter: none;
   transform: none;
 }
