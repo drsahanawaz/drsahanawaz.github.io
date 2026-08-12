@@ -18,7 +18,12 @@ courses:
   - id: fundamental-chemistry
     title: Fundamental Chemistry
     empty_message: "No resources uploaded yet for Fundamental Chemistry."
-    entries: []
+    entries:
+      - title: "Class 1 — Why Chemistry?"
+        type: "Lesson plan"
+        href: "/assets/resources/class1-why-chemistry-mlt-fpt-cswt.pdf"
+        note: "Introductory lesson for Medical Laboratory Technology, Food Processing Technology and Computer Software Technology."
+        external: false
 
 # Optional cross-cutting tools / demos listed on Resources
 tools:
