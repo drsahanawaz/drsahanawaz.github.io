@@ -15,9 +15,9 @@ courses:
         note: "First introductory class for 1st semester Applied Chemistry students."
         external: false
       - title: "Class 1 — Unit 1: Atomic Structure"
-        type: "Slides"
-        href: "/assets/resources/class1-unit1-atomic-structure.pptx"
-        note: "Applied Chemistry, 1st semester — Unit 1 Atomic Structure lecture slides."
+        type: "Lecture PDF"
+        href: "/assets/resources/class1-unit1-atomic-structure.pdf"
+        note: "Applied Chemistry 1st year — Class 1 Unit 1 Atomic Structure lecture file."
         external: false
 
   - id: applied-chemistry-lab
