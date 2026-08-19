@@ -19,6 +19,11 @@ courses:
         href: "/assets/resources/class1-unit1-atomic-structure.pdf"
         note: "Applied Chemistry 1st year — Class 1 Unit 1 Atomic Structure lecture file."
         external: false
+      - title: "Bohr Model"
+        type: "Lecture PDF"
+        href: "/assets/resources/bohr-model.pdf"
+        note: "Applied Chemistry 1st year — Bohr model of the atom."
+        external: false
 
   - id: applied-chemistry-lab
     title: Applied Chemistry Laboratory
