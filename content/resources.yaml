@@ -24,6 +24,11 @@ courses:
         href: "/assets/resources/bohr-model.pdf"
         note: "Applied Chemistry 1st year — Bohr model of the atom."
         external: false
+      - title: "Quantum Concepts"
+        type: "Lecture PDF"
+        href: "/assets/resources/quantum-concepts.pdf"
+        note: "Applied Chemistry 1st year — quantum concepts lecture material."
+        external: false
 
   - id: applied-chemistry-lab
     title: Applied Chemistry Laboratory
