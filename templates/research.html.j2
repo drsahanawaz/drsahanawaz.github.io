@@ -1,99 +1,397 @@
 {% extends "base.html.j2" %}
-{% block title %}Research · {{ site.name }}{% endblock %}
+{% block title %}Research · {{ page.headline }} · {{ site.name }}{% endblock %}
 {% block description %}{{ page.lead }}{% endblock %}
+
 {% block content %}
-<section class="page-hero page-hero--visual page-hero--data">
+<!-- Lab Hero Banner -->
+<section class="lab-hero page-hero--visual page-hero--data">
   <div class="shell">
-    <p class="section-kicker">Research</p>
-    <h1>{{ page.headline }}</h1>
-    <p class="lead">{{ page.lead }}</p>
+    <div class="lab-kicker-bar">
+      <span class="lab-badge lab-badge--accent">{{ page.lab_acronym }}</span>
+      <span class="lab-kicker-text">{{ page.lab_type }}</span>
+    </div>
+    <h1 class="lab-title">{{ page.headline }}</h1>
+    <p class="lab-subtitle">{{ page.group_alias }} · {{ page.pi_title }}</p>
+    <p class="lab-affiliation">
+      <strong>Host Institution:</strong> {{ page.affiliation_primary }}<br>
+      <span class="muted">Doctoral Lineage: {{ page.doctoral_lineage }}</span>
+    </p>
+    <p class="lead lab-lead">{{ page.lead }}</p>
+
+    <!-- Lab Quick Jump Navigation -->
+    <nav class="lab-quicknav" aria-label="Lab page navigation">
+      <a href="#overview">Overview</a>
+      <a href="#pi">Principal Investigator</a>
+      <a href="#thrusts">Research Thrusts</a>
+      <a href="#projects">Active Programs</a>
+      <a href="#facilities">Lab Infrastructure</a>
+      <a href="#tools">Scientific Software</a>
+      <a href="#publications">Publications</a>
+      <a href="#funding">Grant & Funding Portal</a>
+      <a href="#milestones">Lab Milestones</a>
+    </nav>
   </div>
 </section>
 
-<section class="section section-visual section-visual--molecules">
+<!-- Lab at a Glance / Metadata Box for Grant Reviewers -->
+<section class="section section-visual section-visual--soft section-compact" id="overview">
   <div class="shell">
-    <h2>Current research interests</h2>
-    <div class="focus-list">
-      {% for item in page.interests %}
-      <article class="focus-item">
-        <h3>{{ item.title }}</h3>
-        <p>{{ item.text }}</p>
+    <div class="lab-glance-card">
+      <div class="lab-glance-header">
+        <span class="section-kicker">Lab At A Glance</span>
+        <h2>Executive Summary for Funding Schemes & Reviewers</h2>
+        <p class="muted">Summary profile for institutional grant applications, project scheme evaluations, and academic collaborations.</p>
+      </div>
+      <div class="lab-glance-grid">
+        {% for badge in page.overview_badges %}
+        <div class="lab-glance-item">
+          <span class="glance-label">{{ badge.label }}</span>
+          <span class="glance-value">{{ badge.value }}</span>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="lab-glance-footer">
+        <span class="lab-url-tag">Official Lab URL: <code>{{ page.lab_url }}</code></span>
+        <div class="glance-links">
+          <a class="btn btn-ghost btn-sm" href="{{ page.pi.scholar_url }}" rel="noopener noreferrer" target="_blank">Google Scholar</a>
+          <a class="btn btn-ghost btn-sm" href="{{ page.pi.orcid_url }}" rel="noopener noreferrer" target="_blank">ORCID: {{ page.pi.orcid }}</a>
+          <a class="btn btn-ghost btn-sm" href="{{ page.pi.github_url }}" rel="noopener noreferrer" target="_blank">GitHub</a>
+          <a class="btn btn-ghost btn-sm" href="{{ page.pi.linkedin_url }}" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Principal Investigator Profile Card -->
+<section class="section section-visual section-visual--lab" id="pi">
+  <div class="shell">
+    <div class="pi-profile-card">
+      <div class="pi-avatar-col">
+        <img class="pi-photo" src="{{ site.portrait }}" alt="Dr. Md Sahanawaz - Principal Investigator">
+        <div class="pi-verified-badge">
+          <span class="status-dot"></span> PI · PhD (IISER Kolkata)
+        </div>
+      </div>
+      <div class="pi-info-col">
+        <div class="pi-header">
+          <span class="section-kicker">Leadership</span>
+          <h2>{{ page.pi.name }}, <span class="degrees">{{ page.pi.degrees }}</span></h2>
+          <p class="pi-role">{{ page.pi.designation }}</p>
+          <p class="pi-inst">{{ page.pi.institution }}</p>
+        </div>
+        <div class="pi-bio">
+          <p>{{ page.pi.bio }}</p>
+        </div>
+        <div class="pi-credentials-row">
+          <span class="cred-chip">CSIR-NET (AIR 17)</span>
+          <span class="cred-chip">GATE Qualified</span>
+          <span class="cred-chip">JAM Qualified</span>
+          <span class="cred-chip">WBPSC Lecturer Selection</span>
+        </div>
+        <div class="pi-links-bar">
+          <a class="pi-link-chip" href="{{ page.pi.orcid_url }}" rel="noopener noreferrer" target="_blank">
+            <span class="chip-icon">iD</span> ORCID: {{ page.pi.orcid }}
+          </a>
+          <a class="pi-link-chip" href="{{ page.pi.scholar_url }}" rel="noopener noreferrer" target="_blank">
+            <span class="chip-icon">GS</span> Google Scholar
+          </a>
+          <a class="pi-link-chip" href="{{ page.pi.github_url }}" rel="noopener noreferrer" target="_blank">
+            <span class="chip-icon">GH</span> GitHub / drsahanawaz
+          </a>
+          <a class="pi-link-chip" href="{{ page.pi.linkedin_url }}" rel="noopener noreferrer" target="_blank">
+            <span class="chip-icon">in</span> LinkedIn Profile
+          </a>
+          <a class="pi-link-chip" href="mailto:{{ page.pi.email_official }}">
+            <span class="chip-icon">✉</span> {{ page.pi.email_official }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="visual-break visual-break--molecules" role="presentation" aria-hidden="true"></div>
+
+<!-- Core Research Thrusts (Thematic Pillars) -->
+<section class="section section-visual section-visual--molecules" id="thrusts">
+  <div class="shell">
+    <div class="section-heading">
+      <span class="section-kicker">Research Thrusts</span>
+      <h2>Core Thematic Pillars</h2>
+      <p class="lead">Our research integrates synthetic chemical insight, physical organic mechanisms, and modern algorithmic data science across four foundational thrusts.</p>
+    </div>
+
+    <div class="thrust-grid">
+      {% for thrust in page.thrusts %}
+      <article class="thrust-card" id="{{ thrust.id }}">
+        <div class="thrust-top">
+          <span class="thrust-num">{{ thrust.number }}</span>
+          <span class="thrust-tagline">{{ thrust.tagline }}</span>
+        </div>
+        <h3 class="thrust-title">{{ thrust.title }}</h3>
+        <p class="thrust-summary">{{ thrust.summary }}</p>
+        <div class="thrust-techniques">
+          <p class="techniques-label">Key Methodologies & Tools:</p>
+          <ul class="tag-cloud">
+            {% for tech in thrust.techniques %}
+            <li>{{ tech }}</li>
+            {% endfor %}
+          </ul>
+        </div>
       </article>
       {% endfor %}
     </div>
   </div>
 </section>
 
-<section class="section section-visual section-visual--lab">
-  <div class="shell narrow">
-    <p class="section-kicker">Doctoral research</p>
-    <h2>{{ page.phd.title }}</h2>
-    <p class="meta">{{ page.phd.meta }}</p>
-    <p>{{ page.phd.text }}</p>
-    <blockquote class="pull-quote">{{ page.phd.question }}</blockquote>
+<!-- Doctoral Foundation Highlight -->
+<section class="section section-visual section-visual--dim">
+  <div class="shell">
+    <div class="phd-foundation-card">
+      <div class="phd-badge-col">
+        <span class="section-kicker">Doctoral Foundation</span>
+        <span class="phd-year-badge">{{ page.phd.period }}</span>
+        <p class="phd-inst">{{ page.phd.institution }}</p>
+        <p class="phd-supervisor">Supervisor: {{ page.phd.supervisor }}</p>
+      </div>
+      <div class="phd-content-col">
+        <h3>{{ page.phd.title }}</h3>
+        <p class="meta">{{ page.phd.degree }}</p>
+        <p>{{ page.phd.text }}</p>
+        <div class="phd-takeaway">
+          <strong>Methodological Significance:</strong> {{ page.phd.highlight }}
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <div class="visual-break visual-break--data" role="presentation" aria-hidden="true"></div>
 
-<section class="section section-visual section-visual--data section-visual--dim">
+<!-- Active and Grant-Ready Research Programs -->
+<section class="section section-visual section-visual--data" id="projects">
   <div class="shell">
-    <h2>Current projects</h2>
-    <div class="project-list">
+    <div class="section-heading">
+      <span class="section-kicker">Programs & Projects</span>
+      <h2>Active & Proposed Research Programs</h2>
+      <p class="lead">Ongoing computational investigations, sensor array pattern recognition models, and grant-ready project frameworks.</p>
+    </div>
+
+    <div class="lab-project-grid">
       {% for project in page.projects %}
-      <article class="project-item">
-        <div class="project-head">
-          <h3>{{ project.title }}</h3>
-          <span class="status">{{ project.status }}</span>
+      <article class="lab-project-card">
+        <div class="project-header">
+          <span class="project-category">{{ project.category }}</span>
+          <span class="badge badge-{{ project.status_type }}">{{ project.status }}</span>
         </div>
-        <p>{{ project.text }}</p>
-        <p class="meta">{{ project.tools }}</p>
+        <h3 class="project-title">{{ project.title }}</h3>
+        <p class="project-desc">{{ project.description }}</p>
+        <div class="project-tech-box">
+          <span class="tech-label">Technical Stack & Methods:</span>
+          <span class="tech-value">{{ project.stack }}</span>
+        </div>
+        <div class="project-milestone-box">
+          <span class="milestone-label">Milestone / Output:</span>
+          <span class="milestone-value">{{ project.milestone }}</span>
+        </div>
       </article>
       {% endfor %}
     </div>
   </div>
 </section>
 
-<section class="section section-visual section-visual--molecules section-visual--dim" id="publications">
+<!-- Research Infrastructure & Computational Facilities ("Lab Setup") -->
+<section class="section section-visual section-visual--soft" id="facilities">
   <div class="shell">
-    <h2>Publications</h2>
-    <div class="pub-list">
-      {% for pub in publications %}
-      <article class="pub-item">
-        <p class="meta">{{ pub.year }} · {{ pub.journal }}{% if pub.volume %} · {{ pub.volume }}{% endif %}</p>
-        <h3>{{ pub.title }}</h3>
-        <p>{{ pub.summary }}</p>
-        {% if pub.doi %}<p class="meta">DOI: {{ pub.doi }}</p>{% endif %}
-        <a class="text-link" href="{{ pub.url }}" rel="noopener noreferrer" target="_blank">Read paper →</a>
-      </article>
-      {% endfor %}
+    <div class="section-heading">
+      <span class="section-kicker">Infrastructure</span>
+      <h2>Research Facilities & Computational Capabilities</h2>
+      <p class="lead">Our research infrastructure is designed for robust data science, high-throughput cheminformatics calculations, and reproducible spectral analysis.</p>
     </div>
-    <p><a class="text-link" href="{{ site.links.google_scholar }}" rel="noopener noreferrer" target="_blank">View complete profile on Google Scholar →</a></p>
-  </div>
-</section>
 
-<section class="section section-visual section-visual--soft">
-  <div class="shell">
-    <h2>Methods & tools</h2>
-    <dl class="methods">
-      {% for label, values in page.methods.items() %}
-      <div>
-        <dt>{{ label }}</dt>
-        <dd>{{ values | join(" · ") }}</dd>
+    <div class="facilities-grid">
+      {% for facility in page.facilities %}
+      <div class="facility-card">
+        <div class="facility-header">
+          <span class="facility-icon facility-icon--{{ facility.icon }}"></span>
+          <h3>{{ facility.title }}</h3>
+        </div>
+        <ul class="facility-list">
+          {% for detail in facility.details %}
+          <li>{{ detail }}</li>
+          {% endfor %}
+        </ul>
       </div>
       {% endfor %}
-    </dl>
+    </div>
   </div>
 </section>
 
-<section class="section section-visual section-visual--lab">
-  <div class="shell connect">
-    <h2>Interested in working together?</h2>
-    <p>{{ page.collaboration_text }}</p>
-    <div class="cta-row">
-      <a class="btn btn-primary" href="/contact/">Contact me</a>
-      <a class="btn btn-ghost" href="{{ site.links.github }}" rel="noopener noreferrer" target="_blank">GitHub</a>
+<div class="visual-break visual-break--lab" role="presentation" aria-hidden="true"></div>
+
+<!-- Lab Scientific Software & Web Tools Showcase -->
+<section class="section section-visual section-visual--dim" id="tools">
+  <div class="shell">
+    <div class="section-heading">
+      <span class="section-kicker">Software & Open Science</span>
+      <h2>Lab Scientific Software & Web Utilities</h2>
+      <p class="lead">We engineer open-access, zero-installation web applications that translate chemical algorithms into intuitive tools for researchers worldwide.</p>
     </div>
+
+    <div class="tools-showcase-grid">
+      {% for tool in page.tools_showcase %}
+      <article class="tool-showcase-card">
+        <div class="tool-top">
+          <span class="badge badge-accent">{{ tool.status }}</span>
+          <span class="tool-role">{{ tool.role }}</span>
+        </div>
+        <h3 class="tool-name">{{ tool.name }}</h3>
+        <p class="tool-subtitle">{{ tool.subtitle }}</p>
+        <p class="tool-summary">{{ tool.summary }}</p>
+        <div class="tool-tech">
+          <strong>Architecture:</strong> <code>{{ tool.tech }}</code>
+        </div>
+        <div class="tool-actions">
+          <a class="btn btn-primary btn-sm" href="{{ tool.url }}" rel="noopener noreferrer" target="_blank">
+            Launch Tool →
+          </a>
+          <span class="tool-url-preview">{{ tool.url }}</span>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Publications & Scholarly Impact -->
+<section class="section section-visual section-visual--molecules" id="publications">
+  <div class="shell">
+    <div class="section-heading">
+      <span class="section-kicker">Peer-Reviewed Publications</span>
+      <h2>Selected Publications & Scholarly Output</h2>
+      <p class="lead">Peer-reviewed research articles authored and co-authored by Dr. Md Sahanawaz in international journals.</p>
+    </div>
+
+    <div class="lab-pub-list">
+      {% for pub in publications %}
+      <article class="lab-pub-item">
+        <div class="pub-year-badge">{{ pub.year }}</div>
+        <div class="pub-details">
+          <div class="pub-meta">
+            <span class="journal-name">{{ pub.journal }}</span>
+            {% if pub.volume %}<span class="volume-info">· Vol. {{ pub.volume }}</span>{% endif %}
+            {% if pub.featured %}<span class="badge badge-featured">Featured Article</span>{% endif %}
+          </div>
+          <h3 class="pub-title">{{ pub.title }}</h3>
+          {% if pub.authors %}
+          <p class="pub-authors">
+            <strong>Authors:</strong> {{ pub.authors }}
+          </p>
+          {% endif %}
+          <p class="pub-abstract">{{ pub.summary }}</p>
+          {% if pub.topics %}
+          <div class="pub-topics">
+            {% for topic in pub.topics %}
+            <span class="topic-tag">{{ topic }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+          <div class="pub-links">
+            {% if pub.doi %}
+            <a class="pub-btn" href="{{ pub.url }}" rel="noopener noreferrer" target="_blank">
+              DOI: {{ pub.doi }} ↗
+            </a>
+            {% endif %}
+            <a class="pub-btn pub-btn--secondary" href="{{ pub.url }}" rel="noopener noreferrer" target="_blank">
+              Publisher Article Link ↗
+            </a>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+
+    <div class="pub-profiles-banner">
+      <div class="pub-banner-copy">
+        <h3>Complete Scholarly Indices & Citation Profiles</h3>
+        <p>Explore real-time citation metrics, h-index, and complete scholarly records on verified research repositories.</p>
+      </div>
+      <div class="pub-banner-links">
+        <a class="btn btn-primary" href="{{ site.links.google_scholar }}" rel="noopener noreferrer" target="_blank">Google Scholar Profile ↗</a>
+        <a class="btn btn-ghost" href="{{ site.links.orcid }}" rel="noopener noreferrer" target="_blank">ORCID Record ↗</a>
+        <a class="btn btn-ghost" href="{{ site.links.github }}" rel="noopener noreferrer" target="_blank">GitHub Repositories ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Research Collaboration & Grant Funding Portal -->
+<section class="section section-visual section-visual--lab" id="funding">
+  <div class="shell">
+    <div class="section-heading">
+      <span class="section-kicker">Grants & Collaborations</span>
+      <h2>{{ page.funding_portal.headline }}</h2>
+      <p class="lead">{{ page.funding_portal.subheadline }}</p>
+    </div>
+
+    <div class="funding-portal-grid">
+      {% for sec in page.funding_portal.sections %}
+      <article class="funding-portal-card">
+        <div class="portal-card-top">
+          <span class="badge badge-accent">{{ sec.tag }}</span>
+        </div>
+        <h3 class="portal-card-title">{{ sec.title }}</h3>
+        <p class="portal-card-content">{{ sec.content }}</p>
+        <ul class="portal-point-list">
+          {% for pt in sec.points %}
+          <li>{{ pt }}</li>
+          {% endfor %}
+        </ul>
+      </article>
+      {% endfor %}
+    </div>
+
+    <!-- Official Contact & Grant Inquiry Box -->
+    <div class="grant-inquiry-box">
+      <div class="inquiry-copy">
+        <h3>Initiate a Grant Proposal, Collaborative Project, or Research Fellowship</h3>
+        <p>Whether you represent a funding agency, an experimental chemistry lab seeking data-driven computational collaboration, or a prospective student looking for guided research mentorship, we welcome inquiries.</p>
+        <p class="inquiry-contacts">
+          <strong>Official Faculty Email:</strong> <a href="mailto:{{ site.email_professional }}">{{ site.email_professional }}</a> &nbsp;·&nbsp;
+          <strong>Research Email:</strong> <a href="mailto:{{ site.email_general }}">{{ site.email_general }}</a>
+        </p>
+      </div>
+      <div class="inquiry-actions">
+        <a class="btn btn-primary" href="/contact/">Submit Collaboration Inquiry →</a>
+        <a class="btn btn-ghost" href="{{ site.cv_path }}" rel="noopener noreferrer" target="_blank">Download PI Curriculum Vitae (PDF)</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="visual-break visual-break--molecules" role="presentation" aria-hidden="true"></div>
+
+<!-- Lab Milestones & News Timeline -->
+<section class="section section-visual section-visual--dim" id="milestones">
+  <div class="shell">
+    <div class="section-heading">
+      <span class="section-kicker">Chronology</span>
+      <h2>Lab Milestones & Research Highlights</h2>
+      <p class="lead">Key achievements, academic degrees, peer-reviewed publications, and scientific tool deployments.</p>
+    </div>
+
+    <ul class="lab-timeline">
+      {% for item in page.milestones %}
+      <li class="lab-timeline-item">
+        <div class="timeline-year-chip">{{ item.year }}</div>
+        <div class="timeline-body">
+          <h3 class="timeline-title">{{ item.title }}</h3>
+          <p class="timeline-detail">{{ item.detail }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
   </div>
 </section>
 {% endblock %}

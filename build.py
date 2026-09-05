@@ -3,9 +3,22 @@
 
 from __future__ import annotations
 
+import os
 import shutil
+import sys
 from pathlib import Path
 from typing import Any
+
+ROOT = Path(__file__).resolve().parent
+
+# Auto-bootstrap virtualenv Python if system Python lacks dependencies
+_venv_python = ROOT / ".venv" / "bin" / "python"
+if _venv_python.exists() and sys.executable != str(_venv_python):
+    try:
+        import yaml
+        import jinja2
+    except ImportError:
+        os.execv(str(_venv_python), [str(_venv_python), *sys.argv])
 
 import yaml
 from jinja2 import Environment, FileSystemLoader, select_autoescape

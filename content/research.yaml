@@ -1,45 +1,227 @@
-title: Research
-headline: "Chemical problems. Data-driven approaches."
-lead: "Research at the intersection of chemistry, molecular information and data science—from photochromic sensing to reproducible cheminformatics workflows."
+# Research Group / Lab Homepage Data Model
+# Sahanawaz Research Group — Chemical Data Science & Molecular Sensing Laboratory
+title: "Research · Chemical Data Science & Molecular Sensing Laboratory"
+headline: "Chemical Data Science & Molecular Sensing Laboratory"
+lab_acronym: "CDSMS Lab"
+group_alias: "Sahanawaz Research Group"
+pi_title: "Principal Investigator: Dr. Md Sahanawaz, PhD"
+lab_type: "Independent Research Initiative in Chemical Data Science & Computational Chemistry"
+affiliation_primary: "Department of Science & Humanities, Sheikhpara ARM Polytechnic, Govt. of West Bengal"
+doctoral_lineage: "IISER Kolkata (Doctoral Research) · IIT Bombay (M.Sc. Organic Chemistry)"
+lab_url: "https://drsahanawaz.com/research/"
 
-interests:
-  - title: Cheminformatics
-    text: Computational representations of molecules and extraction of chemically meaningful information from molecular datasets—descriptors, fingerprints, chemical-space analysis, similarity and structure–property relationships.
-  - title: Machine Learning for Chemistry
-    text: Supervised and unsupervised learning for chemical classification and prediction, with attention to dimensionality reduction, validation, interpretability and end-to-end workflows.
-  - title: Chemical Sensing & Pattern Recognition
-    text: Multivariate analysis and machine learning for extracting information from complex spectroscopic response patterns and improving analyte discrimination.
-  - title: Molecular Property Prediction
-    text: Cheminformatics pipelines for predicting molecular and physicochemical properties from structural information.
+lead: "We combine chemical intuition with statistical machine learning, cheminformatics algorithms, and computational modeling to solve complex chemical sensing, molecular property prediction, and spectroscopic pattern recognition challenges."
 
+# Fast facts box tailored for funding agencies, grant reviewers, and academic evaluators
+overview_badges:
+  - label: "Principal Investigator"
+    value: "Dr. Md Sahanawaz, PhD"
+  - label: "Host Institution"
+    value: "Sheikhpara ARM Polytechnic (Govt. of WB)"
+  - label: "Research Domains"
+    value: "Cheminformatics · Molecular ML · Optical Sensing"
+  - label: "Primary Methods"
+    value: "Python · RDKit · scikit-learn · PCA/LDA · Kinetics"
+  - label: "Open Software"
+    value: "Spectra Autopilot · TCSPC AutoFit · GitHub Repos"
+  - label: "Grant Readiness"
+    value: "Eligible for SERB/ANRF, DST, CSIR & State Schemes"
+
+# Principal Investigator profile card
+pi:
+  name: "Dr. Md Sahanawaz"
+  degrees: "PhD (IISER Kolkata) · M.Sc. (IIT Bombay)"
+  designation: "Principal Investigator & Head, Dept. of Science & Humanities"
+  institution: "Sheikhpara ARM Polytechnic, West Bengal, India"
+  bio: "Dr. Md Sahanawaz is a chemist and chemical data scientist leading independent research at the intersection of chemistry and computational data science. He completed his B.Sc. in Chemistry from RKMVC College (2016), M.Sc. in Organic Chemistry from IIT Bombay (2018), and PhD in Chemistry from IISER Kolkata (2026). He cleared CSIR-NET with All India Rank 17 and has extensive expertise in photochromic molecular sensing, multivariate spectroscopic pattern recognition, and reproducible Python/RDKit cheminformatics pipelines."
+  orcid: "0009-0000-6615-5441"
+  orcid_url: "https://orcid.org/0009-0000-6615-5441"
+  scholar_url: "https://scholar.google.com/citations?user=DmdFn5wAAAAJ&hl=en"
+  github_url: "https://github.com/drsahanawaz"
+  linkedin_url: "https://www.linkedin.com/in/drmdsahanawaz"
+  email_official: "sahanawaz@wbscte.ac.in"
+  email_personal: "drsahanawazofficial@gmail.com"
+
+# The 4 Core Research Thrusts (Thematic Pillars)
+thrusts:
+  - id: "thrust-1"
+    number: "01"
+    title: "Chemical Machine Learning & Cheminformatics Workflows"
+    tagline: "From Molecular Graphs to Rigorous Predictive Models"
+    summary: "Developing reproducible computational pipelines that convert molecular structures into informative 1D/2D/3D descriptors and fingerprint representations (Morgan, MACCS, RDKit). Constructing predictive regression and classification models using scikit-learn, with emphasis on chemical space visualization, domain applicability, and feature interpretability."
+    techniques: ["RDKit Pipelines", "Molecular Fingerprints", "Chemical Space PCA/t-SNE", "QSAR/QSPR", "Cross-Validation & Robustness"]
+
+  - id: "thrust-2"
+    number: "02"
+    title: "Smart Chemical Sensing & Multivariate Pattern Recognition"
+    tagline: "Photoswitchable Receptors & Spectroscopic Machine Learning"
+    summary: "Coupling photoresponsive molecular switches (azobenzene-based tripodal systems) with multivariate statistical analysis and machine learning. Reversible light-induced cis–trans isomerization modulates sensor binding affinities, creating differential optical response matrices that enable discriminating complex biological analytes (nucleotide phosphates: ATP, ADP, GTP, UTP, CTP)."
+    techniques: ["Photoswitchable Sensing", "Multivariate PCA & LDA", "UV–Vis Spectral Decomposition", "Analyte Discrimination", "Sensor Array Modeling"]
+
+  - id: "thrust-3"
+    number: "03"
+    title: "Molecular Property, Conformation & Reaction Kinetics"
+    tagline: "Investigating Isomerization Dynamics & Structure–Kinetics Relationships"
+    summary: "Investigating the fundamental physical organic chemistry of photoresponsive molecules and functional polymer assemblies. Analyzing the influence of polymer sequence, local polarity, and microenvironmental architecture on cis–trans thermal isomerization kinetics and transition-state stabilization."
+    techniques: ["Thermal Isomerization Kinetics", "RAFT Copolymer Assemblies", "Activation Parameter Modeling", "Microenvironmental Polarity Effects"]
+
+  - id: "thrust-4"
+    number: "04"
+    title: "Open Scientific Software & Web-Based Chemical Tools"
+    tagline: "Zero-Code, Browser-Accessible Utilities for the Global Chemistry Community"
+    summary: "Translating complex spectroscopic and cheminformatics algorithms into accessible, zero-installation web applications. Building browser tools like Spectra Autopilot for automated UV–Vis processing and TCSPC AutoFit for fluorescence decay deconvolution to empower experimental researchers worldwide."
+    techniques: ["Streamlit Architectures", "Interactive Plotly Graphics", "Iterative IRF Reconvolution", "Spectrophotometer Parsers", "Open Science / GitHub"]
+
+# Active and Grant-Ready Research Projects
+projects:
+  - title: "Reproducible Chemical Machine-Learning Pipeline"
+    category: "Cheminformatics & Molecular ML"
+    status: "Active Research"
+    status_type: "active"
+    description: "An end-to-end Python pipeline transforming chemical datasets (SMILES/SDF) into curated molecular descriptors and fingerprints, with automated feature selection, model training, cross-validation, and chemical domain applicability assessment."
+    stack: "Python 3.10+ · RDKit · scikit-learn · pandas · Plotly"
+    milestone: "Core library developed; benchmark models for molecular property prediction in progress."
+
+  - title: "Machine-Learning Assisted Multivariate Analyte Discrimination"
+    category: "Chemical Sensing & Pattern Recognition"
+    status: "Active Program"
+    status_type: "active"
+    description: "Multivariate statistical modeling and pattern-recognition pipelines for multidimensional spectroscopic data. Decomposing complex UV–Vis absorption matrices using PCA and LDA to discriminate structurally close biological nucleotides and inorganic phosphates."
+    stack: "Principal Component Analysis · Linear Discriminant Analysis · Multi-class Classification · UV–Vis Arrays"
+    milestone: "Published in Analysis & Sensing (Wiley, 2026); currently expanding to multi-component sensing matrices."
+
+  - title: "Quantitative Structure–Kinetics Relationships in Functional Azobenzene Polymers"
+    category: "Physical Organic & Computational Chemistry"
+    status: "Ongoing"
+    status_type: "active"
+    description: "Systematic investigation of sequence-defined copolymers containing stearic acid and azobenzene units synthesized via RAFT polymerization. Modeling thermal reversal kinetics and transition-state free energy barriers as a function of segmental microenvironment."
+    stack: "First-Order Kinetic Modeling · Arrhenius/Eyring Formulations · UV–Vis Time Series · Origin/Python"
+    milestone: "Published in Journal of Physical Organic Chemistry (2024); extending toward predictive kinetic models."
+
+  - title: "Web-Based Computational Infrastructure for Experimental Spectroscopy"
+    category: "Scientific Software & Tools"
+    status: "Deployed & Maintained"
+    status_type: "deployed"
+    description: "Developing and maintaining open-access web applications for laboratory spectroscopists. Automated spectrophotometry curve visualization and iterative instrument response function (IRF) reconvolution for fluorescence lifetime decay analysis."
+    stack: "Streamlit Cloud · SciPy Optimize · Horiba/DAS Parser · Interactive Vector Export"
+    milestone: "Two live tools deployed: Spectra Autopilot and TCSPC AutoFit with active academic users."
+
+# Research Infrastructure & Computational Facilities ("Lab Setup")
+facilities:
+  - title: "Computational & Hardware Infrastructure"
+    icon: "compute"
+    details:
+      - "High-performance multi-core processing workstations configured for chemical dataset processing and ML training."
+      - "Local UNIX/Linux and macOS environments with dedicated virtualized scientific runtimes."
+      - "High-capacity data storage architecture with automated version-controlled backups on Git/GitHub."
+      - "Scalable cloud deployment pipeline on Streamlit Community Cloud and GitHub Pages."
+
+  - title: "Cheminformatics & Machine Learning Stack"
+    icon: "code"
+    details:
+      - "Python 3.10+ ecosystem: RDKit, scikit-learn, SciPy, NumPy, pandas, Plotly."
+      - "Molecular representation tools: 2D/3D conformer generation, Morgan fingerprints, MACCS keys, Mordred & RDKit descriptors."
+      - "Supervised & unsupervised learning: PCA, LDA, Random Forests, Support Vector Machines, Gaussian Process Regression."
+      - "Model validation: Stratified k-fold cross-validation, scaffold splits, and applicability domain profiling."
+
+  - title: "Spectroscopic Data & Analytical Processing"
+    icon: "spectroscopy"
+    details:
+      - "Spectrophotometry data pipeline: Multi-format parsing (TXT, CSV, TSV) from Horiba, Shimadzu, PerkinElmer, and JASCO instruments."
+      - "Time-Correlated Single Photon Counting (TCSPC) iterative reconvolution algorithms for multi-exponential decay fitting."
+      - "UV–Vis absorption matrix decomposition for multi-wavelength analyte pattern recognition."
+      - "Automated publication-quality visualization engine generating vector graphics (SVG/PDF)."
+
+  - title: "Open Science & Reproducible Workflows"
+    icon: "open-science"
+    details:
+      - "Fully open-source codebase hosted on GitHub with clean documentation and reproducible environments."
+      - "Adherence to FAIR data principles (Findable, Accessible, Interoperable, Reusable) for chemical research."
+      - "Zero-cost, browser-accessible analytical tools democratizing scientific software for students and researchers."
+      - "Transparent versioning of computational models and benchmark datasets."
+
+# Lab Scientific Software & Web Tools
+tools_showcase:
+  - name: "Spectra Autopilot"
+    subtitle: "Automated UV–Vis Spectrophotometry Plotter & Analyzer"
+    url: "https://spectraautopilot.streamlit.app"
+    status: "Live Web App"
+    summary: "A zero-code browser application designed for experimental chemists. Upload spectrophotometer export files (TXT/CSV/TSV), inspect spectral curves in real-time, overlay multiple concentrations, customize publication axes, and export high-resolution graphics."
+    tech: "Streamlit · Plotly · Python · Spectrophotometer File Parser"
+    role: "Conceived & scientifically led by Dr. Md Sahanawaz"
+
+  - name: "TCSPC AutoFit"
+    subtitle: "Fluorescence Lifetime Decay Fitting via Iterative IRF Reconvolution"
+    url: "https://tcspcautofit.streamlit.app"
+    status: "Live Web App"
+    summary: "Dedicated computational tool for fluorescence decay analysis. Handles Horiba/DAS-style experimental TCSPC data exports, performing iterative convolution of the Instrument Response Function (IRF) with multi-exponential decay models to extract precise lifetime components."
+    tech: "Streamlit · SciPy Nonlinear Least Squares · Multi-exponential IRF Reconvolution"
+    role: "Conceived & scientifically led by Dr. Md Sahanawaz"
+
+  - name: "Chemical ML Pipeline"
+    subtitle: "Modular Python Framework for Molecular Machine Learning"
+    url: "https://github.com/drsahanawaz"
+    status: "Open Source Code"
+    summary: "Modular Python workflows for converting raw chemical libraries into descriptor matrices, training predictive models, evaluating domain applicability, and visualizing chemical space clustering."
+    tech: "RDKit · scikit-learn · Pandas · GitHub"
+    role: "Lead Developer"
+
+# Doctoral Foundation
 phd:
   title: "Photochromic Receptors for Nucleotide Detection Using Machine Learning Techniques"
-  meta: "PhD in Chemistry · IISER Kolkata · 2026"
-  text: |
-    Doctoral research investigated azobenzene-based photochromic molecular systems designed to interact with biologically relevant analytes.
-    Rather than relying exclusively on individual spectroscopic responses, the work explored how patterns embedded in experimental data could be analysed using multivariate statistical and machine-learning techniques.
-    Methods including Principal Component Analysis (PCA) and Linear Discriminant Analysis (LDA) were used to investigate chemical-response patterns and analyte discrimination.
-  question: "How can molecular and experimental chemical data be transformed into reliable, interpretable predictions?"
+  institution: "IISER Kolkata"
+  period: "2018 – 2026"
+  degree: "Doctor of Philosophy (PhD) in Chemical Sciences"
+  supervisor: "Prof. Subhajit Bandyopadhyay"
+  text: "Doctoral research established a novel paradigm combining photochromic supramolecular chemistry with multivariate machine learning. By engineering azobenzene-based tripodal receptors that undergo light-tunable cis–trans isomerization, differential binding signatures were recorded for various nucleotide phosphates (ATP, ADP, GTP, UMP, UTP, CTP) and inorganic phosphates. Applying Principal Component Analysis (PCA) and Linear Discriminant Analysis (LDA) to multidimensional UV–Vis spectral datasets demonstrated robust, error-free classification and discrimination of closely related bio-analytes."
+  highlight: "This doctoral work laid the core methodology for the group's current research in machine-learning-assisted chemical sensing and computational cheminformatics."
 
-projects:
-  - title: Chemical Machine-Learning Pipeline
-    text: Reproducible workflows from raw chemical datasets to molecular representations, exploratory analysis, model development, validation and interpretation.
-    tools: "Python · RDKit · scikit-learn · molecular descriptors · fingerprints"
-    status: Ongoing
-  - title: Machine Learning for Analyte Detection
-    text: Statistical and machine-learning methodologies for analysing multidimensional sensing data and discriminating chemically related analytes.
-    tools: "PCA · LDA · classification · clustering · model validation"
-    status: Ongoing
-  - title: Molecular Property Prediction
-    text: Descriptor- and fingerprint-based machine-learning approaches for predicting chemical properties.
-    tools: "RDKit · Random Forest · Bayesian methods · cheminformatics"
-    status: Ongoing
+# Portal for Funding Agencies, Grant Reviewers, Collaborators, and Prospective Students
+funding_portal:
+  headline: "Research Collaboration & Grant Funding Portal"
+  subheadline: "Information for Funding Bodies, Scheme Evaluators, Academic Partners & Prospective Researchers"
+  sections:
+    - title: "For Funding Agencies & Project Scheme Reviewers"
+      tag: "Grant Readiness"
+      content: "Dr. Md Sahanawaz is a permanent, full-time Lecturer and Head of the Department of Science & Humanities at Sheikhpara ARM Polytechnic, a premier government technical institution under the Department of Technical Education, Training & Skill Development, Govt. of West Bengal. He is eligible to serve as Principal Investigator (PI) for national and state scientific grants (including SERB/ANRF schemes, TARE, DST-SERB, CSIR, WBDST, and bilateral research funds). The polytechnic provides institutional administrative support to host sponsored computational and academic research projects."
+      points:
+        - "Eligible PI status with regular government polytechnic faculty appointment"
+        - "Proven doctoral pedigree from IISER Kolkata and IIT Bombay (CSIR-NET AIR 17)"
+        - "Low computational capital overhead: High ROI on software, data, and workstation grants"
+        - "Focus on reproducible chemical data science aligned with national scientific missions"
 
-methods:
-  Programming: ["Python"]
-  Cheminformatics: ["RDKit", "molecular descriptors", "molecular fingerprints", "chemical-space analysis"]
-  Machine Learning: ["PCA", "LDA", "Random Forest", "Bayesian approaches", "classification", "clustering"]
-  Experimental Data: ["UV–visible spectroscopy", "spectroscopic pattern analysis"]
-  Research Workflow: ["Data preprocessing", "exploratory analysis", "feature engineering", "model development", "validation", "visualisation"]
+    - title: "For Academic & Experimental Collaborators"
+      tag: "Joint Research"
+      content: "We actively collaborate with experimental synthetic chemistry groups, photochemistry labs, supramolecular chemistry researchers, and sensor engineers. If your group generates complex spectroscopic, kinetic, or chemical screening datasets, our lab provides computational expertise in multivariate pattern recognition, machine-learning classification, and cheminformatics modeling."
+      points:
+        - "Multivariate analysis (PCA, LDA, clustering) for optical sensing arrays"
+        - "Cheminformatics modeling and molecular descriptor calculations (RDKit)"
+        - "Kinetic modeling and deconvolution of time-resolved spectroscopic data"
+        - "Joint grant proposal preparation and co-investigator partnerships"
 
-collaboration_text: "Open to collaborations in cheminformatics, machine learning for chemical datasets, chemical property prediction, chemical sensing and pattern recognition, and data-driven molecular research."
+    - title: "For Students & Research Interns"
+      tag: "Mentorship & Projects"
+      content: "We offer research project mentorship for enthusiastic diploma, undergraduate, and postgraduate students in chemistry, chemical engineering, computer science, and data analytics. Students gain hands-on experience in Python programming, RDKit, molecular property prediction, and machine learning applied to chemical problems."
+      points:
+        - "Guided training in Python and open-source cheminformatics"
+        - "Hands-on projects with real chemical and spectroscopic datasets"
+        - "Opportunities for co-authoring conference papers, software tools, and journal articles"
+        - "Supportive mentorship bridging fundamental chemistry with modern data science"
+
+# Lab News & Milestones
+milestones:
+  - year: "2026"
+    title: "PhD Degree Awarded from IISER Kolkata"
+    detail: "Successfully defended and completed doctoral thesis on 'Photochromic Receptors for Nucleotide Detection Using Machine Learning Techniques' at the Department of Chemical Sciences, IISER Kolkata."
+  - year: "2026"
+    title: "Publication in Wiley's Analysis & Sensing"
+    detail: "Published research article demonstrating machine-learning-assisted nucleotide detection using photoswitchable tripodal receptors (DOI: 10.1002/anse.202500082)."
+  - year: "2025"
+    title: "Launch of Public Scientific Tools: Spectra Autopilot & TCSPC AutoFit"
+    detail: "Deployed two open-access scientific web applications on Streamlit Cloud for automated spectrophotometer plotting and time-correlated single photon counting lifetime fitting."
+  - year: "2024"
+    title: "Publication in Journal of Physical Organic Chemistry"
+    detail: "Published research on sequence effects and microenvironmental polarity on the cis–trans thermal isomerization kinetics of functional azobenzene copolymers (DOI: 10.1002/poc.4599)."
+  - year: "2021"
+    title: "Appointed Lecturer in Chemistry (Govt. of West Bengal)"
+    detail: "Selected through WBPSC and appointed as Lecturer in Chemistry at Sheikhpara ARM Polytechnic; currently serving as Head of the Department of Science & Humanities."

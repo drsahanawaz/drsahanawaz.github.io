@@ -50,7 +50,7 @@ entries:
 
 - Keep fitness as a short **Beyond chemistry** section only (not a separate major site).
 - Academic brand first: chemistry × data science.
-- Keep the visual theme **dark** (deep ink background, light text, cyan accent). Do not switch back to a light theme unless the user asks.
+- Keep the visual theme **dark** (deep ink background, light text, teal accent). Do not switch back to a light theme unless the user asks.
 - Both apex and `www` serve this academic site.
 - Prefer editing YAML over inventing new page structures unless asked.
 - Project build language is Python (`build.py`). Do not rewrite the site in another app framework unless the user asks.

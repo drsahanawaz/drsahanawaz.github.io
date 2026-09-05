@@ -28,8 +28,7 @@ nav:
     href: /contact/
     key: contact
 links:
-  google_scholar: "https://scholar.google.com/citations?user=SEARCH_ME"
+  google_scholar: "https://scholar.google.com/citations?user=DmdFn5wAAAAJ&hl=en"
   github: "https://github.com/drsahanawaz"
-  linkedin: "https://www.linkedin.com/in/drsahanawaz"
-  orcid: "https://orcid.org/0000-0000-0000-0000"
-social_note: "Update Google Scholar / ORCID IDs in content/site.yaml when ready."
+  linkedin: "https://www.linkedin.com/in/drmdsahanawaz"
+  orcid: "https://orcid.org/0009-0000-6615-5441"
