@@ -1,6 +1,16 @@
 # Website manager: add new papers at the top of `items`.
 items:
   - year: 2026
+    journal: "ChemRxiv"
+    title: "Benchmark Label Definition, Not Model Capability, Explains a Machine-Learning Advantage over TD-DFT for λmax Prediction"
+    authors: "Md Sahanawaz*"
+    summary: "Machine-learning models trained on literature-mined UV-Vis data are frequently reported to outperform TD-DFT for predicting absorption maxima. This study shows that two features of the benchmark—its label definition and same-corpus provenance—rather than model capability govern the reported margin. On leakage-free holdouts the GP outperforms quantum-chemical references, but applied to genuinely external corpora the advantage depends on label convention compatibility, not chemical novelty."
+    doi: "10.26434/chemrxiv.15008972/v1"
+    url: "https://doi.org/10.26434/chemrxiv.15008972/v1"
+    featured: true
+    topics: ["Molecular Machine Learning", "UV-Vis Spectroscopy", "TD-DFT Benchmarking", "Chemical Data Science"]
+
+  - year: 2026
     journal: "Analysis & Sensing"
     volume: "6 (1), e202500082"
     title: "A Smart Photoswitchable Sensor for Differential Detection of Multiple Nucleotides In Two Photoswitchable States using Machine Learning Techniques"
