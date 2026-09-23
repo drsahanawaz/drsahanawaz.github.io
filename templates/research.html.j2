@@ -184,7 +184,7 @@
 
 <div class="visual-break visual-break--molecules" role="presentation" aria-hidden="true"></div>
 
-<!-- Publications -->
+<!-- Peer-reviewed journal articles -->
 <section class="section section-visual section-visual--molecules" id="publications">
   <div class="shell">
     <div class="section-heading">
@@ -194,13 +194,54 @@
     </div>
 
     <div class="lab-pub-list">
-      {% for pub in publications %}
+      {% for pub in publications if pub.journal != "ChemRxiv" %}
       <article class="lab-pub-item">
         <div class="pub-year-badge">{{ pub.year }}</div>
         <div class="pub-details">
           <div class="pub-meta">
             <span class="journal-name">{{ pub.journal }}</span>
             {% if pub.volume %}<span class="volume-info">· Vol. {{ pub.volume }}</span>{% endif %}
+          </div>
+          <h3 class="pub-title">{{ pub.title }}</h3>
+          {% if pub.authors %}
+          <p class="pub-authors">
+            <strong>Authors:</strong> {{ pub.authors }}
+          </p>
+          {% endif %}
+          <p class="pub-abstract">{{ pub.summary }}</p>
+          {% if pub.topics %}
+          <div class="pub-topics">
+            {% for topic in pub.topics %}
+            <span class="topic-tag">{{ topic }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+          <div class="pub-links">
+            {% if pub.doi %}
+            <a class="pub-btn" href="{{ pub.url }}" rel="noopener noreferrer" target="_blank">
+              DOI: {{ pub.doi }} ↗
+            </a>
+            {% endif %}
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+
+    <!-- Preprints are intentionally separated from peer-reviewed articles. -->
+    <div class="section-heading" style="margin-top: 3rem;">
+      <span class="section-kicker">Early Research</span>
+      <h2>Preprints</h2>
+      <p class="lead">Research manuscripts available before peer-reviewed journal publication.</p>
+    </div>
+
+    <div class="lab-pub-list">
+      {% for pub in publications if pub.journal == "ChemRxiv" %}
+      <article class="lab-pub-item">
+        <div class="pub-year-badge">{{ pub.year }}</div>
+        <div class="pub-details">
+          <div class="pub-meta">
+            <span class="journal-name">{{ pub.journal }}</span>
           </div>
           <h3 class="pub-title">{{ pub.title }}</h3>
           {% if pub.authors %}
