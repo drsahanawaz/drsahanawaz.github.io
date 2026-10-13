@@ -3,9 +3,9 @@
 {% block description %}{{ page.lead }}{% endblock %}
 
 {% block content %}
+<!-- Group Header -->
 <section class="lab-hero page-hero--visual page-hero--data">
   <div class="shell">
-    <h1 class="sr-only">{{ page.headline }}</h1>
     <figure class="research-banner">
       <img
         class="research-banner-image"
@@ -16,6 +16,28 @@
         decoding="async"
       >
     </figure>
+
+    <p class="section-kicker">{{ page.group_type }}</p>
+    <h1 class="lab-title">{{ page.headline }}</h1>
+    <p class="lab-subtitle">{{ page.subheadline }}</p>
+    <p class="lab-ethos"><strong>Core Identity:</strong> {{ page.ethos }}</p>
+    <p class="lab-affiliation">
+      {{ page.affiliation_primary }}<br>
+      <span class="muted">Doctoral Lineage: {{ page.doctoral_lineage }}</span>
+    </p>
+    <p class="lead lab-lead">{{ page.lead }}</p>
+
+    <!-- Quick Navigation -->
+    <nav class="lab-quicknav" aria-label="Page navigation">
+      <a href="#about-lead">Researcher Profile</a>
+      <a href="#research-areas">Research Areas</a>
+      <a href="#phd-foundation">Doctoral Foundation</a>
+      <a href="#methods">Methods &amp; Stack</a>
+      <a href="#tools">Software &amp; Web Tools</a>
+      <a href="#publications">Publications</a>
+      <a href="#collaboration">Collaborations &amp; Inquiries</a>
+      <a href="#milestones">Chronology</a>
+    </nav>
   </div>
 </section>
 
