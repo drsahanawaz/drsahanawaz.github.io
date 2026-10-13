@@ -833,7 +833,8 @@ code {
 }
 
 .research-banner {
-  width: min(100%, 1320px);
+  /* Keep at native pixel width so the current 1024px asset is not upscaled. */
+  width: min(100%, 1024px);
   margin: 0 auto 2rem;
   padding: 0;
   border: 1px solid var(--line);
@@ -845,8 +846,10 @@ code {
 
 .research-banner-image {
   width: 100%;
+  max-width: 100%;
   height: auto;
   display: block;
+  image-rendering: auto;
 }
 
 .lab-title {
