@@ -5,79 +5,17 @@
 {% block content %}
 <section class="lab-hero page-hero--visual page-hero--data">
   <div class="shell">
-    <div class="research-banner">
-      <div class="research-banner-header">
-        <h1 class="research-banner-title">Bayesian Chemistry Lab</h1>
-        <p class="research-banner-subtitle">Towards Reliable Predictions for Photoswitch Molecules</p>
-        <div class="research-banner-meta" aria-label="Research topics">
-          <span>Curated data</span>
-          <span class="meta-separator">•</span>
-          <span>Chemistry-aware models</span>
-          <span class="meta-separator">•</span>
-          <span>Uncertainty &amp; applicability domain</span>
-          <span class="meta-separator">•</span>
-          <span>Robust validation</span>
-        </div>
-      </div>
-
-      <div class="research-banner-grid">
-        <div class="research-story-panel literature-panel">
-          <div class="panel-header panel-header--danger">Current Literature</div>
-          <div class="panel-card-grid">
-            <article class="mini-card">
-              <div class="mini-illustration mini-illustration--dataset"></div>
-              <div class="mini-label">Flat dataset</div>
-            </article>
-            <article class="mini-card">
-              <div class="mini-illustration mini-illustration--blackbox"></div>
-              <div class="mini-label">Black box models</div>
-            </article>
-            <article class="mini-card">
-              <div class="mini-illustration mini-illustration--scatter"></div>
-              <div class="mini-label">Reports on random CV</div>
-            </article>
-            <article class="mini-card">
-              <div class="mini-illustration mini-illustration--failure"></div>
-              <div class="mini-label">Fails on scaffold split</div>
-            </article>
-          </div>
-          <div class="panel-status-row">
-            <span class="status-tag status-tag--danger">No conditions</span>
-            <span class="status-tag status-tag--danger">No physics</span>
-            <span class="status-tag status-tag--danger">No UQ estimation</span>
-            <span class="status-tag status-tag--danger">No AD estimation</span>
-          </div>
-        </div>
-
-        <div class="research-story-panel research-panel">
-          <div class="panel-header panel-header--success">Our Research</div>
-          <div class="panel-card-grid">
-            <article class="mini-card">
-              <div class="mini-illustration mini-illustration--database"></div>
-              <div class="mini-label">Condition &amp; provenance annotated data</div>
-            </article>
-            <article class="mini-card">
-              <div class="mini-illustration mini-illustration--physics"></div>
-              <div class="mini-label">Physics &amp; chemistry-aware model</div>
-            </article>
-            <article class="mini-card">
-              <div class="mini-illustration mini-illustration--validation"></div>
-              <div class="mini-label">Scaffold split &amp; external validation</div>
-            </article>
-            <article class="mini-card">
-              <div class="mini-illustration mini-illustration--uq"></div>
-              <div class="mini-label">UQ and AD estimation</div>
-            </article>
-          </div>
-          <div class="panel-status-row">
-            <span class="status-tag status-tag--success">Conditions annotated</span>
-            <span class="status-tag status-tag--success">Physics aware</span>
-            <span class="status-tag status-tag--success">Uncertainty quantification</span>
-            <span class="status-tag status-tag--success">AD quantification</span>
-          </div>
-        </div>
-      </div>
-    </div>
+    <h1 class="sr-only">{{ page.headline }}</h1>
+    <figure class="research-banner">
+      <img
+        class="research-banner-image"
+        src="{{ page.banner_image }}"
+        alt="{{ page.banner_alt }}"
+        width="1024"
+        height="338"
+        decoding="async"
+      >
+    </figure>
   </div>
 </section>
 

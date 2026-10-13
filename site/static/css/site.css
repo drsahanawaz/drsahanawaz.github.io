@@ -832,6 +832,23 @@ code {
   overflow: hidden;
 }
 
+.research-banner {
+  width: min(100%, 1320px);
+  margin: 0 auto 1.5rem;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #f2f2f0;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+}
+
+.research-banner-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .lab-title {
   font-size: clamp(2rem, 3.8vw, 2.9rem);
   margin: 0.2rem 0 0.4rem;

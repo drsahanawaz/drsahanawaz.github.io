@@ -3,6 +3,8 @@
 title: "Research · Bayesian Chemistry Lab"
 headline: "Bayesian Chemistry Lab"
 subheadline: "Molecular Machine Learning & Chemical Data Science"
+banner_image: "/assets/images/research-banner.jpg"
+banner_alt: "Bayesian Chemistry Lab — Towards Reliable Predictions for Photoswitch Molecules. Current literature uses flat datasets, black-box models, and random CV that fail on scaffold splits. Our research uses condition-annotated data, chemistry-aware models, scaffold and external validation, plus uncertainty and applicability-domain estimation."
 ethos: "Prior chemical principles updated by experimental observation under quantified uncertainty."
 group_type: "Independent Academic Research Laboratory in Chemical Data Science & Computational Chemistry"
 affiliation_primary: "Department of Science & Humanities, Sheikhpara ARM Polytechnic, Govt. of West Bengal"
