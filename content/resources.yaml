@@ -29,6 +29,11 @@ courses:
         href: "/assets/resources/quantum-concepts.pdf"
         note: "Applied Chemistry 1st year — quantum concepts lecture material."
         external: false
+      - title: "Class 33 — Redox and Electrolytes"
+        type: "Lecture PDF"
+        href: "/assets/resources/class33-redox-and-electrolytes.pdf"
+        note: "Applied Chemistry 1st semester — Class 33 Redox and Electrolytes lecture material."
+        external: false
 
   - id: applied-chemistry-lab
     title: Applied Chemistry Laboratory
