@@ -34,6 +34,11 @@ courses:
         href: "/assets/resources/class33-redox-and-electrolytes.pdf"
         note: "Applied Chemistry 1st semester — Class 33 Redox and Electrolytes lecture material."
         external: false
+      - title: "Class 37 — Electrochemical Cells"
+        type: "Lecture PDF"
+        href: "/assets/resources/class37-electrochemical-cells.pdf"
+        note: "Applied Chemistry 1st semester — Class 37 Electrochemical Cells lecture material."
+        external: false
 
   - id: applied-chemistry-lab
     title: Applied Chemistry Laboratory
